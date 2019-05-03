@@ -25,3 +25,4 @@ hs_err_pid*
 /CarrinhoDeCompras/CarrinhoDeCompras-ejb/target/
 /CarrinhoDeCompras/CarrinhoDeCompras-web/target/
 /CarrinhoDeCompras-web/target/CarrinhoDeCompras-web-1.0/WEB-INF/classes/.netbeans_automatic_build
+/CarrinhoDeComprasEntities/target/
