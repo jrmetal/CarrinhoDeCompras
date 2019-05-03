@@ -24,7 +24,4 @@ hs_err_pid*
 /CarrinhoDeCompras/CarrinhoDeCompras-ear/target/
 /CarrinhoDeCompras/CarrinhoDeCompras-ejb/target/
 /CarrinhoDeCompras/CarrinhoDeCompras-web/target/
-/CarrinhoDeCompras/CarrinhoDeCompras-ear/target/maven-archiver/pom.properties/
-/CarrinhoDeCompras/CarrinhoDeCompras-ejb/target/maven-archiver/pom.properties
-
-
+/CarrinhoDeCompras-web/target/CarrinhoDeCompras-web-1.0/WEB-INF/classes/.netbeans_automatic_build
