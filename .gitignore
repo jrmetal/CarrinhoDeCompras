@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/CarrinhoDeCompras/CarrinhoDeCompras-ear/target/
+/CarrinhoDeCompras/CarrinhoDeCompras-ejb/target/
+/CarrinhoDeCompras/CarrinhoDeCompras-web/target/
+/CarrinhoDeCompras/CarrinhoDeCompras-ear/target/maven-archiver/pom.properties/
+/CarrinhoDeCompras/CarrinhoDeCompras-ejb/target/maven-archiver/pom.properties
+
+
