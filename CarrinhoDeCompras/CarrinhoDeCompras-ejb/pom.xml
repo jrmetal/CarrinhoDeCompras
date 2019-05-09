@@ -20,12 +20,6 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>com.cantina</groupId>
-            <artifactId>Entities</artifactId>
-            <version>1.0</version>
-        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
@@ -43,7 +37,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
-            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>dom4j</groupId>
+                    <artifactId>dom4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
     </dependencies>
