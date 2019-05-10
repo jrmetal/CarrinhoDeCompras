@@ -21,6 +21,6 @@ public interface ProductFacadeRemote {
 
     int count();
     
-    String teste();
+    Product teste();
 
 }

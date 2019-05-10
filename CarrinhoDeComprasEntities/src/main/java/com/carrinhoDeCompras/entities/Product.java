@@ -14,20 +14,41 @@ import javax.persistence.Transient;
 @Table(name = "Product", uniqueConstraints = {})
 @DiscriminatorValue(value = "Product")
 public class Product implements Serializable {
-    
+
     @Transient
     public static final String PROPERTY_ID = "ID";
-    
+
     private static final long serialVersionUID = 1L;
     @Column(name = "ID", length = 255, scale = 0, precision = 0, nullable = false, unique = false, insertable = true, updatable = true)
     @Id()
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Transient
     public static final String PROPERTY_NOME = "nome";
 
     @Column(name = "Nome", length = 70, scale = 0, precision = 0, nullable = false, unique = false, insertable = true, updatable = true)
     private String nome;
-    
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", nome=" + nome + '}';
+    }
+
 }

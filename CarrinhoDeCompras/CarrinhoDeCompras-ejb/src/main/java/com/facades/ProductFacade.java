@@ -22,8 +22,12 @@ public class ProductFacade extends AbstractFacade<Product> implements ProductFac
     }
 
     @Override
-    public String teste() {
-        return "teste123";
+    public Product teste() {
+        
+        Product p = new Product();
+        p.setId(10L);
+        p.setNome("Feijão");
+        return p;
     }
 
 }
