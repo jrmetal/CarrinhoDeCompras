@@ -1,6 +1,6 @@
-
 package com;
 
+import com.carrinhoDeCompras.entities.Product;
 import com.remote.ProductFacadeRemote;
 import javax.ejb.EJB;
 import javax.ws.rs.core.Context;
@@ -25,7 +25,11 @@ public class TestResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-       return productFacadeRemote.teste().toString();
+        
+        Product p = new Product();
+        p.setNome("Sabao em pó");
+        productFacadeRemote.create(p);
+        return "teste";
     }
 
 }
