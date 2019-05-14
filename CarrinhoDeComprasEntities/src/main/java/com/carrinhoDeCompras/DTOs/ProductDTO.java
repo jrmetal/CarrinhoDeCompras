@@ -19,7 +19,9 @@ public class ProductDTO implements Serializable {
 
     private String img;
 
-    public ProductDTO(Long id, String description, String barCode, char status, Date createdTime, String measurement, String img) {
+    private boolean deletedFlag;
+
+    public ProductDTO(Long id, String description, String barCode, char status, Date createdTime, String measurement, String img, boolean deletedFlag) {
         this.id = id;
         this.description = description;
         this.barCode = barCode;
@@ -27,6 +29,7 @@ public class ProductDTO implements Serializable {
         this.createdTime = createdTime;
         this.measurement = measurement;
         this.img = img;
+        this.deletedFlag = deletedFlag;
     }
 
     public Long getId() {
@@ -85,9 +88,16 @@ public class ProductDTO implements Serializable {
         this.img = img;
     }
 
-    @Override
-    public String toString() {
-        return "ProductDTO{" + "id=" + id + ", description=" + description + ", barCode=" + barCode + ", status=" + status + ", createdTime=" + createdTime + ", measurement=" + measurement + ", img=" + img + '}';
+    public boolean isDeletedFlag() {
+        return deletedFlag;
     }
 
+    public void setDeletedFlag(boolean deletedFlag) {
+        this.deletedFlag = deletedFlag;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductDTO{" + "id=" + id + ", description=" + description + ", barCode=" + barCode + ", status=" + status + ", createdTime=" + createdTime + ", measurement=" + measurement + ", img=" + img + ", deletedFlag=" + deletedFlag + '}';
+    }
 }

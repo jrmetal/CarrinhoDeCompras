@@ -2,7 +2,6 @@ package com.carrinhoDeCompras.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -65,6 +64,12 @@ public class Product implements Serializable {
     @Column(name = "Img", length = 240, scale = 0, precision = 0, nullable = false, unique = false, insertable = true, updatable = true)
     private String img;
 
+    @Transient
+    public static final String PROPERTY_DELETED_FLAG = "deletedFlag";
+
+    @Column(name = "deletedFlag", nullable = false, unique = false, insertable = true, updatable = true)
+    private boolean deletedFlag = false;
+
     public Long getId() {
         return id;
     }
@@ -121,9 +126,16 @@ public class Product implements Serializable {
         this.img = img;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", description=" + description + ", barCode=" + barCode + ", status=" + status + ", createdTime=" + createdTime + ", measurement=" + measurement + ", img=" + img + '}';
+    public boolean isDeletedFlag() {
+        return deletedFlag;
     }
 
+    public void setDeletedFlag(boolean deletedFlag) {
+        this.deletedFlag = deletedFlag;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", description=" + description + ", barCode=" + barCode + ", status=" + status + ", createdTime=" + createdTime + ", measurement=" + measurement + ", img=" + img + ", deletedFlag=" + deletedFlag + '}';
+    }                           
 }

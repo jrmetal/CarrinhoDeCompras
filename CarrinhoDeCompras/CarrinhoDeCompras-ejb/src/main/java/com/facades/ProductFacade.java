@@ -28,6 +28,7 @@ public class ProductFacade extends AbstractFacade<Product> implements ProductFac
             + "  entity.createdTime, "
             + "  entity.measurement, "
             + "  entity.img, "
+            + "  entity.deletedFlag "
             + ")"
             + "  from " + Product.class.getSimpleName() + " as entity";
 
