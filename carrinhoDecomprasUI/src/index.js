@@ -14,7 +14,7 @@ export default class App extends Component {
   }
 
   loadProduct(){ 
-    return fetch('http://192.168.16.3:8282/CarrinhoDeCompras-web/webresources/Test')
+    return fetch('http://192.168.16.251:8282/CarrinhoDeCompras-web/webresources/Test')
         .then((response) => response.json())
         .then((responseJson) => {
 
